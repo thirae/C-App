@@ -1,0 +1,11 @@
+C:\Users\User\Desktop\hirae\QuizApp\QuizApp\bin\Debug\QuizApp.exe.config
+C:\Users\User\Desktop\hirae\QuizApp\QuizApp\bin\Debug\QuizApp.exe
+C:\Users\User\Desktop\hirae\QuizApp\QuizApp\bin\Debug\QuizApp.pdb
+C:\Users\User\Desktop\hirae\QuizApp\QuizApp\obj\Debug\QuizApp.csprojAssemblyReference.cache
+C:\Users\User\Desktop\hirae\QuizApp\QuizApp\obj\Debug\QuizApp.Properties.Resources.resources
+C:\Users\User\Desktop\hirae\QuizApp\QuizApp\obj\Debug\QuizApp.csproj.GenerateResource.cache
+C:\Users\User\Desktop\hirae\QuizApp\QuizApp\obj\Debug\QuizApp.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\hirae\QuizApp\QuizApp\obj\Debug\QuizApp.exe
+C:\Users\User\Desktop\hirae\QuizApp\QuizApp\obj\Debug\QuizApp.pdb
+C:\Users\User\Desktop\hirae\QuizApp\QuizApp\obj\Debug\QuizApp.TitleForm.resources
+C:\Users\User\Desktop\hirae\QuizApp\QuizApp\obj\Debug\QuizApp.QuizForm.resources
