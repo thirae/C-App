@@ -3,19 +3,24 @@ using System.IO;
 using System.Linq;
 using System;
 using System.Windows.Forms;
+using System.Reflection;
 
 namespace QuizApp
 {
     public class QuizProblem
     {
-        // ファイルパス
-        private string fileName = "C: /Users/User/Desktop/hirae/QuizApp/QuizSheet.csv";
+        Assembly assembly;
+        public QuizProblem()
+        {
+            // 現在の実行ファイル取得
+            assembly = Assembly.GetExecutingAssembly();
+        }
 
         /// <summary>
         /// ランダムで引数のリストからnum分の問題を返すメソッド
         /// </summary>
         /// <param name="num"> 何問問題を出すか決める変数が入った引数</param>
-        /// <param name="list"> すべての問題が入ったリストの引数</param>
+        /// <param name="list"> すべての問題が入ったリストの引数</param>        
         /// <returns></returns>
         public string[][] Random(int num, List<string[]> list)
         {
@@ -39,36 +44,38 @@ namespace QuizApp
         }
 
         /// <summary>
-        /// ファイルのパスをゲットるためのメソッド
-        /// </summary>
-        /// <returns></returns>
-        public string GetFileName()
-        {
-            return fileName;
-        }
-
-        /// <summary>
         /// csvファイル読み込み関数
         /// </summary>
-        /// <param name="fileName"> 引数のファイルパスを読み込む</param>
+        /// <param name="filePath"> 引数のファイルを読み込む</param>
         /// <returns></returns>
-        public List<string[]> CsvReader(string fileName)
+        public List<string[]> CsvReader()
         {
-            // ファイル読み込み
-            StreamReader sr = new StreamReader(@fileName);
+            var stream = assembly
+                .GetManifestResourceStream("QuizApp.CsvFile.QuizSheet.csv");
             List<string[]> lists = new List<string[]>();
 
-            // 末尾まで繰り返す
-            while (!sr.EndOfStream)
+            try
+            {   // ファイル読み込み
+                using (StreamReader sr = new StreamReader(stream))
+                {
+                    // 末尾まで繰り返す
+                    while (!sr.EndOfStream)
+                    {
+                        // CSVファイルの一行を読み込む
+                        string line = sr.ReadLine();
+
+                        // 読み込んだ一行をカンマ毎に分けて配列に格納する
+                        string[] values = line.Split(',');
+
+                        // 配列からリストに格納する
+                        lists.Add(values);
+                    }
+                }
+            }
+            catch (ArgumentNullException e)
             {
-                // CSVファイルの一行を読み込む
-                string line = sr.ReadLine();
-
-                // 読み込んだ一行をカンマ毎に分けて配列に格納する
-                string[] values = line.Split(',');
-
-                // 配列からリストに格納する
-                lists.Add(values);
+                Console.WriteLine("ArgumentNullException をキャッチ");
+                Console.WriteLine(e.Message);
             }
             return lists;
         }

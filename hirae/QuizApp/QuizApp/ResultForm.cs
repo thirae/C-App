@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Media;
 using System.Windows.Forms;
 
@@ -6,14 +7,17 @@ namespace QuizApp
 {
     public partial class ResultForm : Form
     {
+        // オーディオリソースを取り出す
+        private Stream strmAll = Properties.Resources.allcorrect;
         // 全問正解の音
-        private SoundPlayer allCorrectSound =
-            new SoundPlayer(@"C: /Users/User/Desktop/hirae/QuizApp/Sound/allcorrect.wav");
+        private SoundPlayer allCorrectSound = null;
 
         // コンストラクタ
         public ResultForm()
         {
             InitializeComponent();
+
+            allCorrectSound = new SoundPlayer(strmAll);
 
             // 正答率計算用変数
             float right = 0.0f;

@@ -1,23 +1,27 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Media;
+using System.IO;
 
 namespace QuizApp
 {
     public partial class AnswerControl : UserControl
     {
+        // オーディオリソースを取り出す
+        private Stream strmCor = Properties.Resources.correct;
+        private Stream strmErr = Properties.Resources.error;
         // 正解の音
-        private SoundPlayer correctSound =
-            new SoundPlayer(@"C: /Users/User/Desktop/hirae/QuizApp/Sound/correct.wav");
+        private SoundPlayer correctSound = null;
         // ハズレの音
-        private SoundPlayer errorSound =
-            new SoundPlayer(@"C: /Users/User/Desktop/hirae/QuizApp/Sound/error.wav");
+        private SoundPlayer errorSound = null;
 
         // コンストラクタ
         public AnswerControl()
         {
             // インスタンス生成
             InitializeComponent();
+            correctSound = new SoundPlayer(strmCor);
+            errorSound =  new SoundPlayer(strmErr);
         }
 
         /// <summary>

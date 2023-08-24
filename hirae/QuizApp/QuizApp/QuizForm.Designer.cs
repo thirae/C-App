@@ -33,8 +33,11 @@
             // 
             // QuizPanel
             // 
+            this.QuizPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.QuizPanel.AutoSize = true;
-            this.QuizPanel.Location = new System.Drawing.Point(62, 12);
+            this.QuizPanel.Location = new System.Drawing.Point(52, 39);
             this.QuizPanel.Name = "QuizPanel";
             this.QuizPanel.Size = new System.Drawing.Size(945, 454);
             this.QuizPanel.TabIndex = 0;
@@ -43,7 +46,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1074, 522);
+            this.ClientSize = new System.Drawing.Size(1058, 584);
             this.Controls.Add(this.QuizPanel);
             this.Name = "QuizForm";
             this.Text = "UserControl1";

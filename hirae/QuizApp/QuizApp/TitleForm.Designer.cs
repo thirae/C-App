@@ -36,9 +36,9 @@
             // 
             this.StartButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.StartButton.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.StartButton.Location = new System.Drawing.Point(299, 287);
+            this.StartButton.Location = new System.Drawing.Point(299, 354);
             this.StartButton.Name = "StartButton";
-            this.StartButton.Size = new System.Drawing.Size(240, 110);
+            this.StartButton.Size = new System.Drawing.Size(448, 110);
             this.StartButton.TabIndex = 0;
             this.StartButton.Text = "スタート！";
             this.StartButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
@@ -49,9 +49,9 @@
             // 
             this.Quizlabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Quizlabel.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Quizlabel.Location = new System.Drawing.Point(246, 58);
+            this.Quizlabel.Location = new System.Drawing.Point(246, 125);
             this.Quizlabel.Name = "Quizlabel";
-            this.Quizlabel.Size = new System.Drawing.Size(340, 154);
+            this.Quizlabel.Size = new System.Drawing.Size(548, 154);
             this.Quizlabel.TabIndex = 1;
             this.Quizlabel.Text = "なぞなぞQuiz10";
             this.Quizlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -60,7 +60,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(850, 451);
+            this.ClientSize = new System.Drawing.Size(1058, 584);
             this.Controls.Add(this.Quizlabel);
             this.Controls.Add(this.StartButton);
             this.Name = "TitleForm";

@@ -26,7 +26,7 @@ namespace QuizApp
             ansCtr = new AnswerControl();
             QuizProblem quiz = new QuizProblem();
             // ファイル読み込み
-            List<string[]> lists = quiz.CsvReader(quiz.GetFileName());
+            List<string[]> lists = quiz.CsvReader();
             // 読み込んだファイルをシャッフルして引数分返させる
             randomAry = quiz.Random(max, lists);
 
@@ -103,10 +103,9 @@ namespace QuizApp
             {  
                 // 非表示にして結果フォームを表示
                 proCtr.Visible = false;
-                ansCtr.Visible = false;
 
                 ResultForm result = new ResultForm();
-                result.Show();
+                result.ShowDialog();
             }
             else
             {
